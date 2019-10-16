@@ -139,7 +139,7 @@ public class SubDetailAboutView implements OnClickListener {
 		}
 		Intent emailIntent = new Intent(Intent.ACTION_SEND);
 		emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email} );
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Restaurant Inquiry");
+		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Medical Service Inquiry");
 		emailIntent.putExtra(Intent.EXTRA_TEXT, "Your Message Here...");
 		emailIntent.setType("message/rfc822");
 		act.startActivity(Intent.createChooser(emailIntent, "Choose an Email client :"));

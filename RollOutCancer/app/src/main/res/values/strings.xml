@@ -34,6 +34,7 @@
     <string name="hint_any_keywords">Any Keywords</string>
     <string name="keywords">Keywords</string>
     <string name="category">Category</string>
+    <string name="about">About</string>
     <string name="price_rating_range">Price Rating Range</string>
     <string name="food_rating_range">Service Rating Range</string>
 

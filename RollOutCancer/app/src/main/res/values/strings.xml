@@ -15,7 +15,7 @@
     <string name="home">Home</string>
 
     <string name="tab_restaurants">Cancer Centers</string>
-    <string name="tab_categories">Categories</string>
+    <string name="tab_categories">Regions</string>
     <string name="tab_featured">Featured</string>
     <string name="tab_search">Search</string>
     <string name="tab_map">Map</string>
@@ -35,6 +35,7 @@
     <string name="keywords">Keywords</string>
     <string name="category">Category</string>
     <string name="about">About</string>
+    <string name="forum">Forum</string>
     <string name="price_rating_range">Price Rating Range</string>
     <string name="food_rating_range">Service Rating Range</string>
 

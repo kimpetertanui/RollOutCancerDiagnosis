@@ -24,17 +24,17 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 
-public class AboutActivity extends AppCompatActivity {
+public class ForumActivity extends AppCompatActivity {
 
 
     WebView wv;
     static ProgressBar progressBar;
-    String url = "https://rolloutcancer.000webhostapp.com/rollout/privacy.html";
+    String url = "https://rolloutcancer.000webhostapp.com/rollout/live-group-chat.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_forum);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -77,13 +77,7 @@ public class AboutActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 //            return true;
-            Intent intent= new Intent(AboutActivity.this,SettingsActivity.class);
-            startActivity(intent);
-        }
-
-       else if (id == R.id.action_forum) {
-//            return true;
-            Intent intent= new Intent(AboutActivity.this,ForumActivity.class);
+            Intent intent= new Intent(ForumActivity.this,SettingsActivity.class);
             startActivity(intent);
         }
 
@@ -97,7 +91,7 @@ public class AboutActivity extends AppCompatActivity {
 
 
         ActionBar actionBar = this.getSupportActionBar();
-        actionBar.setTitle(R.string.about);
+        actionBar.setTitle(R.string.forum);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

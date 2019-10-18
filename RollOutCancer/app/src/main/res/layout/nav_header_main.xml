@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center"
-        android:src="@mipmap/header_logo"
+        android:src="@mipmap/quizdroid_logo"
         android:layout_marginTop="@dimen/dimen_10dp" />
 </FrameLayout>

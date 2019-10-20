@@ -89,6 +89,13 @@ public class AboutActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        else if (id == R.id.action_donate) {
+//            return true;
+            Intent intent= new Intent(AboutActivity.this, DonateActivity.class);
+            startActivity(intent);
+        }
+
+
         return super.onOptionsItemSelected(item);
     }
 

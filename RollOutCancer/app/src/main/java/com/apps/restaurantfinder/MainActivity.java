@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -29,7 +30,10 @@ import com.google.android.gms.ads.AdView;
 import com.libraries.utilities.MGUtilities;
 
 import com.projects.activities.AboutActivity;
+import com.projects.activities.DonateActivity;
+import com.projects.activities.ForumActivity;
 import com.projects.activities.SettingsActivity;
+import com.projects.activities.WelcomeActivity;
 import com.projects.fragments.CategoryFragment;
 import com.projects.fragments.FavoriteFragment;
 import com.projects.fragments.FeaturedFragment;
@@ -53,6 +57,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(MainActivity.this, WelcomeActivity.class);
+                startActivity(intent);
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+            }
+        });
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
             toolbar.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         }
@@ -84,6 +99,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         showFragment(new HomeFragment());
         showAds();
     }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+////            return true;
+//            Intent intent= new Intent(MainActivity.this,SettingsActivity.class);
+//            startActivity(intent);
+//        }
+//
+//        else if (id == R.id.action_forum) {
+////            return true;
+//            Intent intent= new Intent(MainActivity.this, ForumActivity.class);
+//            startActivity(intent);
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
+
 
     @Override
     public void onBackPressed() {
@@ -121,6 +166,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+//            return true;
+            Intent intent= new Intent(MainActivity.this,SettingsActivity.class);
+            startActivity(intent);
+        }
+
+        else if (id == R.id.action_forum) {
+//            return true;
+            Intent intent= new Intent(MainActivity.this, ForumActivity.class);
+            startActivity(intent);
+        }
+
+        else if (id == R.id.action_donate) {
+//            return true;
+            Intent intent= new Intent(MainActivity.this, DonateActivity.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }

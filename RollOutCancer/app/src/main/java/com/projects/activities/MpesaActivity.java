@@ -81,7 +81,7 @@ public class MpesaActivity extends AppCompatActivity {
 
             //TODO :: REPLACE WITH YOUR OWN CREDENTIALS  :: THIS IS SANDBOX DEMO
             LNMExpress lnmExpress = new LNMExpress( "174379", "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",  //https://developer.safaricom.co.ke/test_credentials
-                    "1", "254724489640", "174379", "254715740888", "http://meal.shulemall.com/api", "RollOut Cancer", "Pay" );
+                    "1", "254708995320", "174379", "254715740888", "http://meal.shulemall.com/api", "RollOut Cancer", "Pay" );
 
             //This is the
             daraja.requestMPESAExpress( lnmExpress, new DarajaListener<LNMResult>() {
